@@ -1,0 +1,16 @@
+.stats_block {
+  margin: 100px;
+}
+
+.stats_list {
+  display: flex;
+}
+
+.stats_item {
+  margin-right: 15px;
+}
+
+li {
+  list-style-type: none;
+  text-transform: capitalize;
+}
