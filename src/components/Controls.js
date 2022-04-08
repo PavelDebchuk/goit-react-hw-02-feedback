@@ -1,23 +1,18 @@
 import React from 'react';
 
-const Controls = ({ onGradeGood, onGradeNeutral, onGradeBad }) => (
+const Controls = ({ options, onFeedbackClick }) => (
   <ul className="stats_list">
-    <li className="stats_item">
-      <button type="button" onClick={onGradeGood}>
-        good
-      </button>
-    </li>
-    <li className="stats_item">
-      <button type="button" onClick={onGradeNeutral}>
-        neutral
-      </button>
-    </li>
-    <li className="stats_item">
-      <button type="button" onClick={onGradeBad}>
-        bad
-      </button>
-    </li>
+    {options.map(option => (
+      <li className="stats_item" key={option}>
+        <button
+          type="button"
+          name={option}
+          onClick={() => onFeedbackClick(option)}
+        >
+          {option}
+        </button>
+      </li>
+    ))}
   </ul>
 );
-
 export default Controls;
